@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Page</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">
+                <span class="fa fa-fire"></span>Survey Questions</h1>
+            <hr>
+            <a href="/">
+                <button class="btn btn-lg btn-default">
+                    <span class="fa fa-home"></span>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Reservation Page -->
+            <div class="card">
+                <div class="card-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <h3>ABOUT YOU</h3>
+                            <label for="user-name">Name (*)</label>
+                            <input type="text" class="valid" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-photo">Link to Photo Image (*)</label>
+                            <input type="text" class="valid" id="userPhoto">
+                        </div>
+
+                        <div class="form-group">
+                            <h3>Question 1</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q1">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <h3>Question 2</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q2">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h3>Question 3</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q3">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h3>Question 4</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q4">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h3>Question 5</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q5">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h3>Question 6</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q6">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h3>Question 7</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q7">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h3>Question 8</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q8">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h3>Question 9</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q9">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h3>Question 10</h3>
+                            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                            <p>I see myself as extroverted, enthusiastic.</p>
+                            <select data-placeholder="" class="form-control" id="q10">
+                                <option value="">Choose an option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div> -->
+
+                        <button type="submit"  data-toggle="modal" class="btn btn-primary submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--display friend match modal-->
+
+    <!-- Button trigger modal -->
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Hello, BFF! Meet your new best friend:</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <img id="matchPic" src="" alt="No Image" width=250px>
+                    <h5 id="matchName"></h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="/api/friends">API Friends List</a> |
+                <a href="https://github.com/kellidragon/Friend-Finder" target='_blank'>Github Repo</a>
+        </div>
+    </footer>
+
+    </div>
+
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+
+        function validateForm() {
+            var isValid = true;
+            $('.valid').each(function () {
+                if ($(this).val() === '') {
+                    isValid = false;
+                    console.log("true")
+                }
+            });
+            $('.form-control').each(function () {
+                if ($(this).val() === "") {
+                    isValid = false;
+                   
+                }
+            });
+            return isValid;
+        }
+        //if everything is filled out
+        if (validateForm() == true) {
+
+            var newFriend = {
+                customerName: $("#name").val().trim(),
+                customerPhoto: $("#userPhoto"),
+                scores: [
+                    $('#q1').val(),
+                    $('#q2').val(),
+                    $('#q3').val(),
+                    $('#q4').val(),
+                    $('#q5').val(),
+                    $('#q6').val(),
+                    $('#q7').val(),
+                    $('#q8').val(),
+                    $('#q9').val(),
+                    $('#q10').val(),
+                ]
+            };
+
+            console.log(newFriend);
+
+
+            $.post("/api/friends", newFriend,
+                function (data) {
+                    if (data) {
+                        $("#matchName").text(data.name);
+                        $("#matchPic").attr("src", data.customerPhoto);
+                    } else {
+                        alert("Please complete the survey to see yout results!");
+                    }
+                    // $('.modal').modal();
+                })
+            // Clear the form when submitting
+            $('#name').val("");
+            $('#userPhoto').val("");
+            $('#q1').val("");
+            $('#q2').val("");
+            $('#q3').val("");
+            $('#q4').val("");
+            $('#q5').val("");
+            $('#q6').val("");
+            $('#q7').val("");
+            $('#q8').val("");
+            $('#q9').val("");
+            $('#q10').val("");
+
+        }
+
+
+    });
+
+
+</script>
