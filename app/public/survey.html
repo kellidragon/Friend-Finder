@@ -219,7 +219,9 @@
     </footer>
 
     </div>
-
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
@@ -227,31 +229,30 @@
 
 <script type="text/javascript">
 
-    $(".submit").on("click", function (event) {
-        event.preventDefault();
+    $(".submit").on("click", function(event) {
 
+
+       event.preventDefault();
         function validateForm() {
             var isValid = true;
-            $('.valid').each(function () {
-                if ($(this).val() === '') {
+            $('.valid').each(function() {
+                if ($(this).val() === ''){
                     isValid = false;
-                    console.log("true")
                 }
             });
-            $('.form-control').each(function () {
-                if ($(this).val() === "") {
+            $('.form-control').each(function() {
+                if ($(this).val() === ""){
                     isValid = false;
-                   
                 }
             });
             return isValid;
         }
-        //if everything is filled out
+  
         if (validateForm() == true) {
-
+            //creates a new friend 
             var newFriend = {
-                customerName: $("#name").val().trim(),
-                customerPhoto: $("#userPhoto"),
+                name: $('#name').val().trim(),
+                customerPhoto: $('#userPhoto').val().trim(),
                 scores: [
                     $('#q1').val(),
                     $('#q2').val(),
@@ -265,21 +266,15 @@
                     $('#q10').val(),
                 ]
             };
+          
+            $.post("/api/friends", newFriend, function(data) {
+                $("#matchName").text(data.name);
+                $("#matchPic").attr("src", data.customerPhoto);
+            });
+           
+                $('#myModal').modal('show')
 
-            console.log(newFriend);
-
-
-            $.post("/api/friends", newFriend,
-                function (data) {
-                    if (data) {
-                        $("#matchName").text(data.name);
-                        $("#matchPic").attr("src", data.customerPhoto);
-                    } else {
-                        alert("Please complete the survey to see yout results!");
-                    }
-                    // $('.modal').modal();
-                })
-            // Clear the form when submitting
+            //clear form after submission
             $('#name').val("");
             $('#userPhoto').val("");
             $('#q1').val("");
@@ -292,11 +287,12 @@
             $('#q8').val("");
             $('#q9').val("");
             $('#q10').val("");
-
+        } else {
+            alert("Please fill out ALL fields before submitting survey!")
         }
-
-
+ 
     });
+
 
 
 </script>

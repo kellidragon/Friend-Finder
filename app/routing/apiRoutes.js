@@ -34,9 +34,15 @@ module.exports = function(app) {
     }
 
     //return bestMatch data
-    var bff = friendList[bestMatch];
+    var bff = friendData[bestMatch];
     res.json(bff);
 
     friendData.push(req.body);
   });
 };
+
+
+
+
+
+  
