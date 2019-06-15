@@ -9,7 +9,7 @@ module.exports = function(app) {
 
 
   app.post('/api/friends', function(req,res){
-    //grabs the new friend's scores to compare with friends in friendList array
+    //grabs the new friend's scores to compare with friends in friendData array
     var newFriendScores = req.body.scores;
     var scoresArray = [];
     var bestMatch = 0;
@@ -17,12 +17,10 @@ module.exports = function(app) {
     //runs through all current friends in list
     for(var i=0; i<friendData.length; i++){
       var scoresDiff = 0;
-      //run through scores to compare friends
+      //compare friends
       for(var j=0; j<newFriendScores.length; j++){
         scoresDiff += (Math.abs(parseInt(friendData[i].scores[j]) - parseInt(newFriendScores[j])));
       }
-
-      //push results into scoresArray
       scoresArray.push(scoresDiff);
     }
 
@@ -37,6 +35,7 @@ module.exports = function(app) {
     var bff = friendData[bestMatch];
     res.json(bff);
 
+    //add new user
     friendData.push(req.body);
   });
 };
