@@ -4,7 +4,7 @@ The Friend Finder application is basically a dating app, but for makin' new budd
 
 This project was created as an assignment for the Coding Bootcamp at UT Austin.
 
-[View the finished product HERE on Heroku.] (https://boiling-cove-65649.herokuapp.com/)
+[View the finished product HERE on Heroku.] (https://social-app-2.herokuapp.com/)
 
 # Technologies Used #
 HTML
