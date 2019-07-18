@@ -2,8 +2,6 @@
 
 The Friend Finder application is basically a dating app, but for makin' new buddies. This full-stack site will take in users' surveys, then compares their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
-This project was created as an assignment for the Coding Bootcamp at UT Austin.
-
 [View the finished product HERE on Heroku.] (https://social-app-2.herokuapp.com/)
 
 # Technologies Used #
